@@ -28,7 +28,6 @@ def index():
         filename = 'quotes.csv'
         input_file = request.files.get('file')
         input_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    
     # Return template
     return render_template('index.html')
 
@@ -37,18 +36,14 @@ def download():
     # Initialize empty variables for Jinja
     table = ''
     total = ''
-    
     # Read Uploaded data
     input_data = pd.read_csv(r'.\uploads\quotes.csv')
-    
     # Get URLs for scraping
     get_URLs_list = get_URLs(input_data)
     urls = get_URLs_list[0]
     urls2 = get_URLs_list[1]
-    
     # Get Name Data
     names = namescrape(urls)
-    
     # Get data from upload
     userdata = print_input(input_data, names)
     # Store variables
@@ -57,11 +52,10 @@ def download():
     etfnames = userdata[2]
     pf = userdata[3]
     pft = userdata[4]
-    
     # Convert CSV and download result
     output_data = convert(urls2, pf, pft, etfnames)
     output = output_data.to_csv(r'.\uploads\result.csv', index=False)
-    
+    # Return template and variables
     return render_template('download.html', table=table, total = total, filename='result.csv')
 
 # Download result route
@@ -71,4 +65,5 @@ def output(filename):
 
 # On running server.py, run Flask app
 if __name__ == "__main__":
+    # Still under development, run debug
     app.run(debug=True)
