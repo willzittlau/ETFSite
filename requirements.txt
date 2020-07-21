@@ -1,0 +1,8 @@
+Flask==1.1.2
+pandas==1.0.4
+requests==2.23.0
+Flask_Dropzone==1.5.4
+Werkzeug==1.0.1
+beautifulsoup4==4.9.1
+lxml==4.5.1
+grequests==0.6.0
