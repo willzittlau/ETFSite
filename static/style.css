@@ -1,0 +1,21 @@
+h2 {
+    text-align: center;
+    font-family: 'Geneva', Arial, sans-serif;
+    font-weight: bold;
+}
+table {
+    table-layout: auto;
+    width: 70%;
+    margin-left:15%; 
+    margin-right:15%;
+}
+th {
+    text-align: left;
+}
+.instr {
+    font-family: Tahoma, Arial, sans-serif;
+}
+.summary {
+    font-family: Tahoma, Arial, sans-serif;
+    text-align: center;
+}

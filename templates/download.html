@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>ETF Converter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<h2>This site will convert a portfolio containing ETFs and break it down into exposure to their individual holdings.</h2>
+<br>
+<body>
+    {% if table %}
+        <div align = "center">
+            <style scoped="">
+                .button-large {
+                font-size: 150%;
+            }
+            </style>
+            <a href="{{ url_for('output', filename=filename) }}"><button class="button-large pure-button">
+                <i class="fa fa-download"></i> Download Result
+            </button></a>
+            <br> or <br>
+            <a href="{{ url_for('index') }}"><button class="pure-button"> Return Home
+            </button></a>
+        </div>
+        <div class = "summary">
+            <h3> This is a summary of what you uploaded: </h3>
+            <b>The total portfolio value in $CAD is: {{total}} </b>
+        </div>
+        <div class = "pure-table pure-table-horizontal" align = "center">
+            {{table|safe}}
+        </div>
+    {% endif %}
+</body>
+</html>

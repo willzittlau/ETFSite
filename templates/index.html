@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>ETF Converter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='fav.ico') }}">
+    {{ dropzone.load_css() }}
+    {{ dropzone.style('border: 2px dashed #0087F7; margin: 3%; min-height: 400px;') }}
+</head>
+
+<h2>This site will convert a portfolio containing ETFs and break it down into exposure to their individual holdings.</h2>
+
+<body>
+    <class = 'instr'>
+        <b>Instructions:</b>
+        <ul>
+            <li>Go to Yahoo Finance in another tab and sign in.</li>
+            <li>Select a portfolio which contains ETFs and click on download as CSV.</li>
+            <li>Once the CSV file has been downloaded, upload it here using the File Uploader.</li>
+            <li>Wait a moment, and the page will be redirected to your updated CSV with a download link.</li>
+        </ul>
+        Notes:<br>
+        <i>***This script will only work with US or Canadian equities, and will return holdings in $CAD</i><br>
+        <i>***It can only return the top 25 holdings, any remaning value will be added back to the ETF ticker with a 'Misc' notation</i>
+    </div>
+    {{ dropzone.create('/') }}
+    {{ dropzone.load_js() }}
+    {{ dropzone.config() }}
+</body>
+</html>
