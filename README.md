@@ -19,6 +19,8 @@ $ py app.py
 ```
     http://127.0.0.1:5000/
 
+*_There is already a quotes.csv file added to the project folder to use as a demo file. For actual use, delete this demo file and replace it with the quotes.csv downloaded from your Yahoo Finance portfolio. This .csv file can be anywhere on your computer, it doesn't need to stay in the project folder_
+
 ## Limitations
 
 This script only works for portfolios containing US and Canadian equitities traded on the major exchanges. This means that it will only work with ETFs and individual stocks, not things like precious metals, cash equivalents, or mutual funds etc. Also, only the top 25 holdings from each ETF can be pulled, so any remaining value will be added back to the original ETF ticker name with a 'Misc' notation added.
