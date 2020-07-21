@@ -1,5 +1,7 @@
 # ETF Converter
 
+***This app is meant for personal/project use only and is not currently meant to be launched publicly outside of localhost.***
+
 ETF Converter is a simple site which takes csv input from a user's Yahoo Finance data, and returns underlying ETF holdings and the resulting overall exposure to individual companies by using Python.
 
 ## Installation
@@ -19,7 +21,7 @@ $ py app.py
 ```
     http://127.0.0.1:5000/
 
-*_There is already a quotes.csv file added to the project folder to use as a demo file. For actual use, delete this demo file and replace it with the quotes.csv downloaded from your Yahoo Finance portfolio. This .csv file can be anywhere on your computer, it doesn't need to stay in the project folder_
+*_There is already a quotes.csv file added to the project folder to use as a demo file. For actual use, delete this demo file and replace it with the quotes.csv downloaded from your Yahoo Finance portfolio. This .csv file can be anywhere on your computer, it doesn't need to stay in the project folder._
 
 ## Limitations
 
