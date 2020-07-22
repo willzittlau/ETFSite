@@ -1,4 +1,6 @@
 # Import libraries
+from gevent import monkey
+monkey.patch_all()
 import os
 from flask import Flask, render_template, request, make_response, url_for, send_from_directory
 from werkzeug.utils import secure_filename
@@ -23,11 +25,13 @@ app.config.update (
 # Main page
 @app.route("/", methods =['GET', 'POST'])
 def index():
+    MYDIR = os.path.dirname(__file__) # Heroku dir path
     if request.method == 'POST':
         #Take CSV input
         filename = 'quotes.csv'
         input_file = request.files.get('file')
-        input_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        input_file.save(os.path.join(MYDIR + "/" + app.config['UPLOAD_FOLDER'], filename)) # Heroku dir path for tmp upload
+        #input_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename)) # Commented out to test
     # Return template
     return render_template('index.html')
 
