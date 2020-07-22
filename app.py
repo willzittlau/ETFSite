@@ -68,7 +68,8 @@ def download():
 # Download result route
 @app.route("/output/<filename>")
 def output(filename):
-    return send_from_directory('uploads', filename, as_attachment=True)
+    return send_from_directory('tmp', filename, as_attachment=True)
+    # return send_from_directory('uploads', filename, as_attachment=True) # Commented out to test
 
 # On running server.py, run Flask app
 if __name__ == "__main__":
