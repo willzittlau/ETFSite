@@ -15,7 +15,7 @@ dropzone = Dropzone(app)
 # Update app configuration
 app.config.update (
     #UPLOAD_FOLDER = '.\\uploads', # Commented out to test
-    UPLOAD_FOLDER = '/app/tmp',
+    UPLOAD_FOLDER = '/tmp',
     # Flask-Dropzone config:
     DROPZONE_ALLOWED_FILE_CUSTOM = True,
     DROPZONE_ALLOWED_FILE_TYPE='.csv',
@@ -43,7 +43,7 @@ def download():
     total = ''
     # Read Uploaded data
     #input_data = pd.read_csv(r'.\uploads\quotes.csv') # Commented out to test
-    input_data = pd.read_csv('/app/tmp/quotes.csv')
+    input_data = pd.read_csv('/tmp/quotes.csv')
     # Get URLs for scraping
     get_URLs_list = get_URLs(input_data)
     urls = get_URLs_list[0]
@@ -60,7 +60,7 @@ def download():
     pft = userdata[4]
     # Convert CSV and download result
     output_data = convert(urls2, pf, pft, etfnames)
-    output = output_data.to_csv('/app/tmp/result.csv', index=False)
+    output = output_data.to_csv('/tmp/result.csv', index=False)
     #output = output_data.to_csv(r'.\uploads\result.csv', index=False) # Commented out to test
     # Return template and variables
     return render_template('download.html', table=table, total = total, filename='result.csv')
