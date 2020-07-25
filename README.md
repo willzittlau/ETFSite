@@ -1,14 +1,15 @@
 # ETF Converter
+**For a live demo, please visit https://etfconverter.herokuapp.com/**
 
-***This app is meant for personal/project use only and is not currently meant to be launched publicly outside of localhost.***
+***This app is meant for personal/project use only and the live demo is not secure.***
 
-ETF Converter is a simple site which takes csv input from a user's Yahoo Finance data, and returns underlying ETF holdings and the resulting overall exposure to individual companies by using Python.
+ETF Converter is a simple site which takes csv input from a user's Yahoo Finance data, and returns underlying ETF holdings and the resulting overall exposure to individual companies.
 
 It's written using Python 3, and uses primarily pandas and asynchronous webscraping (grequests, Beautiful soup) to convert user input. Front end is HTML with some Jinja and the CSS is mainly from Pure-CSS.
 
 ## Installation
 
-Download all of the files and folders from Github and add it to a new project path. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required libraries outlined in requirements.txt. Make sure that the folder structure is kept consistent between the package downloaded from Github and your project path.
+Download all of the files and folders from Github and add it to a new project path. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required libraries outlined in requirements.txt. Make sure that the folder structure is kept consistent between the package downloaded from Github and your project path. If planning to run locally, uncomment out the python # tags on app.py indicating local use and comment out the Heroku ones.
 
 ```bash
 $ pip install -r requirements.txt
@@ -22,6 +23,8 @@ To launch this site locally, run app.py and navigate to your local host address.
 $ py app.py
 ```
     http://127.0.0.1:5000/
+
+Alternatively, you can also use the demo site provided, however, file uploads are not secure!
 
 *_There is already a quotes.csv file added to the project folder to use as a demo file. For actual use, delete this demo file and replace it with the quotes.csv downloaded from your Yahoo Finance portfolio. This .csv file can be anywhere on your computer, it doesn't need to stay in the project folder._
 
