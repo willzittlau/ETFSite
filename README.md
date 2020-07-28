@@ -5,7 +5,7 @@
 
 ETF Converter is a simple site which takes csv input from a user's Yahoo Finance data, and returns underlying ETF holdings and the resulting overall exposure to individual companies.
 
-It's written using Python 3, and uses primarily pandas and asynchronous webscraping (grequests, Beautiful soup) to convert user input. Front end is HTML with some Jinja and the CSS is mainly from Pure-CSS.
+It's written using Flask in python3, and primarily uses pandas and asynchronous webscraping (grequests, Beautiful soup) to convert user input. Front end is HTML with some Jinja and the CSS is mainly from Pure-CSS.
 
 ## Installation
 
