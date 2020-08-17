@@ -1,5 +1,5 @@
 # ETF Converter
-**For a live demo, please visit https://etfconverter.herokuapp.com/**
+**For a live demo, please visit https://etfconverter.herokuapp.com/ Or, alternatively, there is a GIF loop of the demo file at the bottom of this README.**
 
 ***This app is meant for personal/project use only and the live demo is not secure.***
 
@@ -30,11 +30,13 @@ Alternatively, you can also use the demo site provided, however, file uploads ar
 
 ## Limitations
 
-This script only works for portfolios containing US and Canadian equitities traded on the major exchanges. This means that it will only work with ETFs and individual stocks, not things like precious metals, cash equivalents, or mutual funds etc. Also, only the top 25 holdings from each ETF can be pulled, so any remaining value will be added back to the original ETF ticker name with a 'Misc' notation added.
+This script only works for portfolios containing US and Canadian equitities traded on the major exchanges. This means that it will only work with ETFs and individual stocks, not things like precious metals, cash equivalents, or mutual funds etc. Also, only the top 25 holdings from each ETF can be pulled, so any remaining value will be added back to the original ETF ticker name with a 'Misc' notation added. If ycharts changes their site structure, the script will break.
 
 ## Contributing
 
 Feel free to take this template and edit it however you would like. I would love to hear about any improvements you make!
 
+## Demo
+![](https://raw.githubusercontent.com/willzittlau/ETFsite/master/demo.gif)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) Free Usage
