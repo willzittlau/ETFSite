@@ -1,11 +1,14 @@
 # ETF Converter
-**For a live demo, please visit https://etfconverter.herokuapp.com/ . Or, alternatively, there is a GIF loop of the demo file at the bottom of this README.**
+**For a live demo, please visit https://etfconverter.herokuapp.com/. There is also a GIF loop of the demo file included in this README.**
 
 ***This app is meant for personal/project use only and the live demo is not secure.***
 
 ETF Converter is a simple site which takes csv input from a user's Yahoo Finance data, and returns underlying ETF holdings and the resulting overall exposure to individual companies.
 
 It's written using Flask in python3, and primarily uses pandas and asynchronous webscraping (grequests, Beautiful soup) to convert user input. Front end is HTML with some Jinja and the CSS is mainly from Pure-CSS.
+
+## Demo
+![](https://raw.githubusercontent.com/willzittlau/ETFsite/master/demo.gif)
 
 ## Installation
 
@@ -35,9 +38,6 @@ This script only works for portfolios containing US and Canadian equitities trad
 ## Contributing
 
 Feel free to take this template and edit it however you would like. I would love to hear about any improvements you make!
-
-## Demo
-![](https://raw.githubusercontent.com/willzittlau/ETFsite/master/demo.gif)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) Free Usage
