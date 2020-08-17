@@ -37,9 +37,18 @@ def namescrape(urls):
     for r in resp:
         get_text = r.text
         soup = BeautifulSoup(get_text, "lxml")
-        for div in soup.findAll('h1', attrs={'class':'securityName'}):
-            name= div.find('a').contents[0]
-            names.append(name)
+        try:
+            for div in soup.findAll('h1', attrs={'class':'securityName'}):
+                name= div.find('a').contents[0]
+                names.append(name)
+        except:
+            pass
+        else:
+            for div in soup.findAll('h1', attrs={'class':'index-name-text'}):
+                name= div.string
+                name = name.replace("\n", "")
+                name = name[24:]
+                names.append(name)
     return names
 
 # This function returns a cleaned up version of the user input to be printed back to the user and initalize variables for the main function
@@ -100,11 +109,12 @@ def convert(urls2, pf, pft, etfnames):
     for i, r in enumerate(resp):
         get_text = r.text
         try:
-            wds=pd.read_html(get_text)[0]
+            wds=pd.read_html(get_text)[1]
         # This statement skips equities so the scraper can pull ETF data only
         except:
             pass
         else:
+            wds = wds.rename(columns={"%\xa0Weight": "% Weight", "%\xa0Change" : "% Chg"})
             # Filter col of interest and convert '% Weight' col from str to float, format Symbol col
             for j in range(0,len(wds['% Weight'])):
                 wds.at[j, '% Weight'] = wds.at[j, '% Weight'].replace("%","")
