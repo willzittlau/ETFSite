@@ -1,5 +1,5 @@
 # ETF Converter
-**For a live demo, please visit https://etfconverter.herokuapp.com/ Or, alternatively, there is a GIF loop of the demo file at the bottom of this README.**
+**For a live demo, please visit https://etfconverter.herokuapp.com/ . Or, alternatively, there is a GIF loop of the demo file at the bottom of this README.**
 
 ***This app is meant for personal/project use only and the live demo is not secure.***
 
@@ -38,5 +38,6 @@ Feel free to take this template and edit it however you would like. I would love
 
 ## Demo
 ![](https://raw.githubusercontent.com/willzittlau/ETFsite/master/demo.gif)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) Free Usage
